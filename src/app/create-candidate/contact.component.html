@@ -4,11 +4,13 @@
     <mat-grid-tile [colspan]="1" [rowspan]=1>
       <mat-form-field formGroupName="contact">
         <input matInput placeholder="Email" formControlName="email">
-    </mat-form-field>
+          <mat-error>Email is required & must be a valid email address</mat-error>
+      </mat-form-field>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="1" [rowspan]=1>
   <mat-form-field formGroupName="contact">
       <input matInput placeholder="Phone" formControlName="phone">
+      <mat-error>Phone is required</mat-error>
   </mat-form-field>
 </mat-grid-tile>
 </mat-grid-list>

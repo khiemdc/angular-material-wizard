@@ -27,11 +27,11 @@ export class CreateCandidateComponent implements OnInit {
             'lastName': new FormControl(null, Validators.required)
             }),
         'contact': new FormGroup({
-            'email': new FormControl(null),
-            'phone': new FormControl(null)
+            'email': new FormControl(null, [Validators.required, Validators.email]),
+            'phone': new FormControl(null, Validators.required)
             }),
         'job': new FormGroup({
-            'functionalTitle': new FormControl(null)
+            'functionalTitle': new FormControl(null, Validators.required)
         })
     });
   }
