@@ -5,7 +5,9 @@
     <mat-grid-tile [colspan]="1" [rowspan]=1>
       <mat-form-field formGroupName="contact">
         <input matInput placeholder="Email" formControlName="email">
-          <mat-error>Email is required & must be a valid email address</mat-error>
+        <mat-error *ngIf="contactForm.controls['contact'].controls.email.hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="contactForm.controls['contact'].controls.email.hasError('email')">Email must be a valid email address</mat-error>
+          <!-- <mat-error>Email is required & must be a valid email address</mat-error> -->
           <!-- <div *ngIf="contactForm.controls['contact'].controls.email.errors.email">
           <mat-error>Email must be a valid email address</mat-error></div> -->
     </mat-form-field>
