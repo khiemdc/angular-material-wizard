@@ -10,7 +10,8 @@ import * as Material from '@angular/material';
     Material.MatFormFieldModule,
     Material.MatStepperModule,
     Material.MatInputModule,
-    Material.MatButtonModule
+    Material.MatButtonModule,
+    Material.MatCardModule
   ],
   exports: [
     Material.MatGridListModule,
@@ -18,7 +19,8 @@ import * as Material from '@angular/material';
     Material.MatFormFieldModule,
     Material.MatStepperModule,
     Material.MatInputModule,
-    Material.MatButtonModule
+    Material.MatButtonModule,
+    Material.MatCardModule
   ],
   declarations: []
 })

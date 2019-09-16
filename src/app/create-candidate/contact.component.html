@@ -1,5 +1,6 @@
 <div class="container" class="centerDiv" novalidate>
-<form [formGroup]="contactForm">
+<mat-card style="margin-top: 20px; padding-top: 30px;">
+  <form [formGroup]="contactForm">
   <mat-grid-list cols="2" rowHeight="2:1">
     <mat-grid-tile [colspan]="1" [rowspan]=1>
       <mat-form-field formGroupName="contact">
@@ -20,6 +21,7 @@
   <button mat-flat-button matStepperPrevious class="button">Previous</button>
   <button mat-flat-button matStepperNext color="primary" class="button">Next</button>
 </form>
+</mat-card>
 </div>
 
 

@@ -1,9 +1,10 @@
 <div *ngIf="formSubmitted">
-    <h4>Details submitted successfully</h4>
+    <h4>Candidate created successfully</h4>
   </div>
 <div *ngIf="!formSubmitted">
-    <h4>Review & Submit</h4>
+    <h5>Review & Submit</h5>
 <div class="container" style="margin-top: 3%" novalidate>                    
+  <mat-card style="padding-top: 40px;">
   <form [formGroup]="reviewForm">
     <mat-grid-list cols="6" rowHeight="3:1">
       <mat-grid-tile [colspan]="2" [rowspan]=1>
@@ -38,6 +39,7 @@
       <button type="submit" mat-flat-button color="primary" class="button" (click)="submit()">Submit</button>
     </div>  
   </form>
+</mat-card>
 </div>
 </div>
 <pre>{{ reviewForm.value | json }}</pre>
