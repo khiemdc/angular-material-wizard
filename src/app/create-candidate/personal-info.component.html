@@ -1,0 +1,25 @@
+<div class="container" style="margin-top: 5%;" novalidate>
+  <form [formGroup]="personalForm">
+    <mat-grid-list cols="3" rowHeight="2:1">
+      <mat-grid-tile>
+        <mat-form-field formGroupName="personalInfo">
+          <input matInput placeholder="First Name" formControlName="firstName">
+          <mat-error>First Name is required</mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field formGroupName="personalInfo">
+          <input matInput placeholder="Middle Name" formControlName="middleName">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field formGroupName="personalInfo">
+          <input matInput placeholder="Last Name" formControlName="lastName">
+          <mat-error>Last Name is required</mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <br><br>
+    <button mat-flat-button matStepperNext color="primary" class="button" (click)="personalInforSubmitted()">Next</button>
+  </form>
+</div>

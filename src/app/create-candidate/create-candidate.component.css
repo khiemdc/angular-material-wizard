@@ -1,0 +1,15 @@
+.centerDiv
+    {
+      width: 60%;
+      padding: 30px;
+      margin: 0 auto;
+      /* background-color:#FFA500 ; */
+      text-align: center;
+    }
+    
+.container {
+  text-align: center;
+}
+.button {
+  margin-right: 10px;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <span class="fill-remaining-space"></span>
+    <span>Angular Material Wizard with Reactive Form</span>
+    <span class="fill-remaining-space"></span>
+  </mat-toolbar>
+</div>
+
+<div class="container">
+  <form [formGroup]="candidateForm">
+    <mat-horizontal-stepper #stepper linear>
+      <mat-step formGroupName="personalInfo"
+        [stepControl]="candidateForm.get('personalInfo')">
+        <ng-template matStepLabel>Enter Personal Details</ng-template>
+        <app-personal-info  [personalForm]="candidateForm"></app-personal-info>
+      </mat-step>
+      <mat-step formGroupName="contact"
+        [stepControl]="candidateForm.get('contact')">
+        <ng-template matStepLabel>Contact Information</ng-template>
+        <app-contact [contactForm]="candidateForm"></app-contact>
+      </mat-step>
+      <mat-step>
+          <ng-template matStepLabel>Revew & Submit</ng-template>
+          <app-review-submit [regForm]="candidateForm"></app-review-submit>
+        </mat-step>
+    </mat-horizontal-stepper>
+  </form>
+</div>

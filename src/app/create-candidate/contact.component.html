@@ -1,0 +1,21 @@
+<div class="container" class="centerDiv" novalidate>
+<form [formGroup]="contactForm">
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile [colspan]="1" [rowspan]=1>
+      <mat-form-field formGroupName="contact">
+        <input matInput placeholder="Email" formControlName="email">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]=1>
+  <mat-form-field formGroupName="contact">
+      <input matInput placeholder="Phone" formControlName="phone">
+  </mat-form-field>
+</mat-grid-tile>
+</mat-grid-list>
+  <br><br>
+  <button mat-flat-button matStepperPrevious class="button">Previous</button>
+  <button mat-flat-button matStepperNext color="primary" class="button">Next</button>
+</form>
+</div>
+
+
